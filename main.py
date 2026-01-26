@@ -13,7 +13,7 @@ def main():
     )
 
     parser.add_argument("csv", help="Ruta del archivo CSV con los cambios")
-    parser.add_argument("--titulo", default="Acta comité de cambios")
+    parser.add_argument("--titulo", default="ACTA COMITÉ DE CAMBIOS")
     parser.add_argument("--salida", default="output/")
     parser.add_argument("--plantilla", default="templates/acta_cambios.docx")
     parser.add_argument("--lugar", default="WhatsApp")

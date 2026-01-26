@@ -1,0 +1,5 @@
+﻿codigo;nombre;fecha_ejecucion;descripcion;entidad;lider;cargo_lider;plataforma;crm
+CB-NO-EX-N/A-77337-PDCL;Aplicaicon IC de parametrizacion nuevo BIN;23/01/2026;Modificación de parámetros.;BPO Banco Coopcentral;Sebastian Fernandez;Lider técnico;AS400;800
+CB-NO-EX-N/A-CRM77344-PRD;Actualización usuario de captura de novedades de afiliación;23/01/2026;Modificación de parámetros.;BPO Banco Coopcentral;Cesar Galan;Lider técnico;AS401;800
+CB-NO-EX-N/A-77355-PRD;Solicitud creación CRM - parametrización comisión consulta de saldo en cajeros;23/01/2026;Modificación de parámetros.;BPO Ban 100;Angel Romero;Lider técnico;AS402;800
+CB-NO-EX-N/A-77376-PDCL;77376 - Comite de cambios administardor coltefinanciera - CRM36078  Transacciones autorizadas no aplicadas en módulo de compensación;23/01/2026;Modificación de parámetros.;BPO ASNET Coltefinanciera;Andrea Leal;Lider técnico;AS403;800

@@ -68,8 +68,8 @@ acta.agregar_cambio(c3)
 
 
 # ===== GENERAR DOCUMENTO =====
-temp = Path("actas/temp.docx")
-final = Path(f"actas/{acta.numero}.docx")
+temp = Path("output/temp.docx")
+final = Path(f"output/{acta.numero}.docx")
 
 generador = GeneradorActaWord("templates/acta_cambios.docx")
 procesador = DocumentProcessor()

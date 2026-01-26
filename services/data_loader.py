@@ -6,8 +6,8 @@ class CSVLoader:
     def cargar_cambios(self, ruta_csv):
         cambios = []
 
-        with open(ruta_csv, newline='', encoding='utf-8') as archivo:
-            reader = csv.DictReader(archivo)
+        with open(ruta_csv, newline='', encoding='utf-8-sig') as archivo:
+            reader = csv.DictReader(archivo, delimiter=';')
 
             columnas = reader.fieldnames
             esperadas = [

@@ -1,0 +1,15 @@
+﻿codigo;nombre;fecha_ejecucion;descripcion;entidad;lider;cargo_lider;plataforma;crm
+CB-EM-EX-N/A-77383-PRD;Depuración de los logs transaccionales del cliente BICO.;26/01/2026;"La afectación en producción crítica corresponde al deterioro del rendimiento de la máquina debido al alto nivel de ocupación generado por los logs transaccionales del cliente BICO, los cuales están consumiendo recursos de manera excesiva y representan un riesgo alto de indisponibilidad para la máquina de producción PCI.
+Esta solicitud no se radicó en los tiempos establecidos porque, para ejecutar la ventana el 29 de enero de 2026, es necesario notificar al cliente con la anticipación requerida, y debido al nivel de riesgo actual asociado al crecimiento de los logs no es posible esperar al procedimiento regular de gestión de cambios.
+Ante las siguientes preguntas:
+¿Cuál es la afectación en producción critica que está deteriorando el servicio?
+Samuel Contreras indica que la afectación principal que es deterioro en el rendimiento de la máquina por el alto nivel de ocupación de los logs de este cliente.
+¿Por qué no se radicó y presentó por los tiempos establecidos en el procedimiento de gestión de cambios, y por qué no se puede esperar a estos?
+Samuel indica que para poder ejecutar la ventana el día 29 de enero de 2026 se requiere notificar al cliente con el debido tiempo de anticipación.";BPO AS•NET;Samuel Contreras;Administrador de plataforma;AS400;77383
+CB-NO-EX-AS2564 -77407-PRD;AS2564 Migración y Compra Cartera FLAMINGO;26/01/2026;"El cambio correspondiente al CRM se basa en catalogar en producción la entidad FLAMINGO, como cliente del BaaS de COLTEFINANCIERA. Con esto se solicita habilitación demanda de los usuarios administradores requeridos para los días 27, 28 y 29 de enero del 2026, realizando traza del usuario o los usuarios activos en el CRM.
+
+Con esto se podra realizar el proceso de configuración de la entidad FLAMINGO en el BaaS de COLTEFINANCIERA y posteriormente realizar la migración del producto. ";BPO ASNET Coltefinanciera;John Blanco;Gerente de diseño de producto;AS400 - JAVA;77407
+CB-NO-EX-N/A-CRM77416 -PRD;CRM77416 COMITE DE CAMBIOS ACTIVACION USUARIO BPOCTD645A - CRM 36078 Transacciones autorizadas no aplicadas en módulo de compensación ;26/01/2026;"Se solicita aprobar el usuario de COLTEFINANCIERA producción con el fin de atender una solicitud de la entidad, donde requiere eliminación de la captura a la transacción 961 por el valor de 1,561,900 de la tarjeta de crédito 840357676716855 de la tabla CRMG la cual fue capturada el día 26 de enero del 2026, y no debe quedar aplicada al momento de realizar el cierre diario.
+Ante la pregunta realizada por Ayda Castro:
+¿Por qué en lugar de borrar la transacción, no la marcan como error?
+Luz Marina indica que lo que se necesita es borrar de la tabla CRMG ese registro, debido a que la entidad capturo y aprobó esa transacción, y está solicitando la eliminación de la base de datos porque fue un error de captura y no debe quedar aplicada a la tarjeta al momento de realizar el cierre.";BPO ASNET Coltefinanciera;Luz Marina Coronado;Analista gestión de incidentes;AS400;77416

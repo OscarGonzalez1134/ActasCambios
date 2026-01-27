@@ -25,7 +25,7 @@ def main():
     ruta_csv = Path(args.csv)
     salida = Path(args.salida)
     plantilla = Path(args.plantilla)
-    numeroActa=Path(args.numero)
+    numeroActa=str(Path(args.numero)).split("=")[-1]
     lugar=Path(args.lugar)
 
     salida.mkdir(exist_ok=True)
@@ -46,7 +46,7 @@ def main():
     for c in cambios:
         acta.agregar_cambio(c)
 
-    nombre_archivo = str(acta.numero).split("=")[-1]+".docx"# f"ACTA_{datetime.now().strftime('%Y%m%d_%H%M%S')}.docx"
+    nombre_archivo = acta.numero+".docx"# f"ACTA_{datetime.now().strftime('%Y%m%d_%H%M%S')}.docx"
     temp = salida / ("temp_" + nombre_archivo)
     final = salida / nombre_archivo
 

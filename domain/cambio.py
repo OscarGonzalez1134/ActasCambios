@@ -12,7 +12,7 @@ class Cambio:
         self.plataforma = plataforma
         self.crm = crm
 
-    def validar(self):
+    def validar(self): 
         return all([
             self.codigo,
             self.nombre,

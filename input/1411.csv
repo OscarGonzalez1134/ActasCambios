@@ -1,0 +1,19 @@
+﻿codigo;nombre;fecha_ejecucion;descripcion;entidad;lider;cargo_lider;plataforma;crm
+CB-NO-IN-N/A-78029-PDCL;Habilitación del MCC 5331 y 5311 para el subtipo 101 de tarjeta prepago;13/02/2026;"Se presenta al Comité de Cambios la solicitud correspondiente al CRM 78029, con el fin de realizar la habilitación del usuario administrador de Coltefinanciera.
+Asimismo, se tiene como propósito habilitar los MCC 5331 y 5311 para el subtipo 101 de tarjeta prepago, proceso que se ejecuta en cuenta digital y BPO.";BPO ASNET Coltefinanciera;Ángel Romero;Analista gestión de incidentes;AS400 - JAVA;78029
+CB-NO-IN-N/A-78050-PDCL;NOVEDAD ESTADO DE TDC;13/02/2026;"Se solicita la habilitación del usuario administrador de Banco Unión con el objetivo de ejecutar el programa de alcance desarrollado en el CM 35450, correspondiente a clientes con inconvenientes en el estado de TDC.
+
+Lo anterior da continuidad a lo definido en los comités 77826, 77658 y 77610, para atender a los nuevos clientes afectados a la fecha, en cumplimiento del compromiso diario establecido conforme a la solución final del 27 de febrero de 2024.
+
+Asimismo, se busca corregir de manera inmediata un conjunto de clientes que la entidad no reportó en el CRM 35949, afectados por el caso de cambio de estado masivo en la BPO.";BPO Banco Unión;Stefania Andrade;Analista de certificación;AS400 - JAVA;78050
+CB-NO-IN-N/A-78052-PRD;Procesamiento archivo ESTR;13/02/2026;Se presenta una petición al comité de cambios que consiste en la habilitación del usuario administrador de Banco de Occidente para procesar el archivo ESTR del día 10/02/2026. Debido a que fue dispuestoo en el horario que no correspondia y no pudo ser procesador de manera automatica en el aplicativo;BPO Banco de Occidente;César Galán;Analista gestión de incidentes;AS400;78052
+CB-NO-IN-N/A-78053-PRD;Afiliación de comercios;13/02/2026;"La presente solicitud consiste en la habilitación del usuario administrador de Coltefinanciera, con el fin de realizar el proceso de afiliación de los comercios relacionados con el CRM de servicio al cliente 36468.
+
+Lo anterior se requiere como apoyo al equipo de Fábrica de Software, el cual identificó novedades en el proceso de creación de cuentas máster. En ese sentido, se solicita la habilitación para efectuar la afiliación y subsanar de manera inmediata la situación, mientras se asigna el recurso de desarrollo en Java y los demás perfiles necesarios para superar de forma definitiva la novedad.";BPO ASNET Coltefinanciera;César Galán;Analista gestión de incidentes;AS400;78053
+CB-NO-IN-N/A-78050-PDCL;CRM36482 No se han recibido archivos de interfaces contables;14/02/2026;"El objetivo de la presente solicitud, correspondiente al CRM 78059, es la habilitación de los usuarios administradores BPLOCLA461A y BPO465A para los días 14, 15 y 16 de febrero.
+
+Esta solicitud obedece a una situación especial relacionada con el seguimiento en producción del cliente Claro, en el marco del proceso de estabilización posterior al pase a producción del proyecto Fianza Tecnología de Equipos.
+
+Se requiere la extensión temporal de la habilitación en el CRM debido a la criticidad y al nivel de inmediatez que demanda la atención y gestión de incidentes en ambiente productivo. El apoyo contemplado incluye la validación, generación y transferencia de interfaces contables asociadas a los procesos de facturación, cobranzas, entre otros.
+
+El plan de trabajo comprende acompañamiento y seguimiento operativo desde las 7:00 a.m. hasta las 5:00 p.m., durante los días solicitados.";BPO Claro;José Gregorio Hernández;Ingeniero de proyectos;AS400;78059

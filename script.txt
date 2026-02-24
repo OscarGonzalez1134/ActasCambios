@@ -1,0 +1,13 @@
+Para whatsapp:
+1. Ajuste en ambiente 
+python main.py input/141.csv --titulo="ACTA COMITÉ DE CAMBIOS AJUSTE EN AMBIENTE PRODUCTIVO" numero=1414
+
+2. Emergente y ajuste en ambiente 
+python main.py input/1418.csv --titulo="ACTA COMITÉ DE CAMBIOS EMERGENTE Y AJUSTE EN AMBIENTE PRODUCTIVO" numero=1418
+
+3. Conexiones y ajuste en ambiente 
+python main.py input/1416.csv --titulo="ACTA COMITÉ DE CAMBIOS CONEXIONES Y AJUSTE EN AMBIENTE PRODUCTIVO" numero=1416
+
+Para teams
+
+python main.py input/1419.csv --titulo="ACTA COMITÉ DE CAMBIOS ORDINARIO" numero=1419 --lugar=Teams

@@ -2,7 +2,7 @@ import argparse
 from pathlib import Path
 from datetime import datetime
 
-from services.data_loader import CSVLoader
+from services.data_loader import ExcelLoader
 from services.generador_word import GeneradorActaWord
 from services.document_processor import DocumentProcessor
 from domain.acta import ActaCambios
@@ -31,10 +31,10 @@ def main():
     salida.mkdir(exist_ok=True)
 
     print("Cargando cambios...")
-    loader = CSVLoader()
+    loader = ExcelLoader()
     cambios = loader.cargar_cambios(ruta_csv)
 
-    print(f"✔ {len(cambios)} cambios cargados")
+    print(f" {len(cambios)} cambios cargados")
 
     acta = ActaCambios(
         titulo=titulo,
@@ -50,21 +50,21 @@ def main():
     temp = salida / ("temp_" + nombre_archivo)
     final = salida / nombre_archivo
 
-    print("📝 Generando acta...")
+    print(" Generando acta...")
     generador = GeneradorActaWord(plantilla)
     generador.generar(acta, temp)
 
-    print("🧹 Limpiando documento...")
+    print(" Limpiando documento...")
     procesador = DocumentProcessor()
     procesador.limpiar_filas_vacias(temp, final)
 
     if final.exists():
         temp.unlink()
-        print("✔ Acta generada correctamente:")
+        print(" Acta generada correctamente:")
         print("   ", final)
 
     else:
-        print("❌ Error: no se pudo generar el acta final")
+        print(" Error: no se pudo generar el acta final")
 
 if __name__ == "__main__":
     main()

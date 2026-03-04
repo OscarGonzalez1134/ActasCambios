@@ -11,3 +11,7 @@ class ActaCambios:
             self.cambios.append(cambio)
         else:
             raise ValueError("Cambio con datos incompletos")
+    @property
+    def solicitantes(self):
+        # eliminamos duplicados usando set
+        return list({c.solicitante for c in self.cambios})

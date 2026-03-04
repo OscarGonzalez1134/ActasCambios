@@ -1,10 +1,12 @@
 import pandas as pd
 from domain.cambio import Cambio
+from domain.solicitante import Solicitante
 
 class ExcelLoader:
     
     def cargar_cambios(self, ruta_excel):
         cambios = []
+        solicitantes_dic = {} 
         
         # Leemos el archivo xlsm. Por defecto lee la primera hoja.
         # engine='openpyxl' es necesario para archivos .xlsm / .xlsx
@@ -27,14 +29,23 @@ class ExcelLoader:
             # Convertimos la fila a diccionario para facilitar el acceso por nombre
             datos = fila._asdict()
             
+            nombre_lider = str(datos["lider"]).strip()
+            cargo_lider = str(datos["cargo_lider"]).strip()
+            
+            clave = f"{nombre_lider.lower()}|{cargo_lider.lower()}"
+
+            if clave not in solicitantes_dic:
+                solicitantes_dic[clave] = Solicitante(nombre_lider, cargo_lider)
+
+            solicitante = solicitantes_dic[clave]
+
             cambio = Cambio(
                 codigo=str(datos["codigo"]).strip(),
                 nombre=str(datos["nombre"]).strip(),
                 fecha_ejecucion=str(datos["fecha_ejecucion"]).strip(),
                 descripcion=str(datos["descripcion"]).strip(),
                 entidad=str(datos["entidad"]).strip(),
-                lider=str(datos["lider"]).strip(),
-                cargo_lider=str(datos["cargo_lider"]).strip(),
+                lider= solicitante,
                 plataforma=str(datos["plataforma"]).strip(),
                 crm=str(datos["crm"]).strip()
             )

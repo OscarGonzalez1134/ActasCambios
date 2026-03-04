@@ -14,7 +14,7 @@ class GeneradorActaWord:
             "temas": [c.tema_acta(i+1) for i, c in enumerate(acta.cambios)],
             "bloques": [c.bloque_narrativo(i+1) for i, c in enumerate(acta.cambios)],
             "resumen": [c.fila_resumen() for c in acta.cambios],
-            "lideres": [c.datos_lider() for c in acta.cambios],
+            "lideres": [{"nombre": s.nombre, "cargo": s.cargo} for s in acta.solicitantes],
             "total_cambios": len(acta.cambios)
         }
 

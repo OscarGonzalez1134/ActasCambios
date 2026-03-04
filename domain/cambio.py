@@ -7,8 +7,7 @@ class Cambio:
         self.fecha_ejecucion = fecha_ejecucion
         self.descripcion = descripcion
         self.entidad = entidad
-        self.lider = lider
-        self.cargo_lider = cargo_lider
+        self.lider = solicitante
         self.plataforma = plataforma
         self.crm = crm
 

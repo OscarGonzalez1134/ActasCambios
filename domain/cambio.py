@@ -1,13 +1,15 @@
+
+
 class Cambio:
     def __init__(self, codigo, nombre, fecha_ejecucion, descripcion,
-                 entidad, lider, cargo_lider, plataforma, crm):
+                 entidad, solicitante, plataforma, crm):
 
         self.codigo = codigo
         self.nombre = nombre
         self.fecha_ejecucion = fecha_ejecucion
         self.descripcion = descripcion
         self.entidad = entidad
-        self.lider = solicitante
+        self.solicitante = solicitante
         self.plataforma = plataforma
         self.crm = crm
 
@@ -18,17 +20,11 @@ class Cambio:
             self.fecha_ejecucion,
             self.descripcion,
             self.entidad,
-            self.lider,
-            self.cargo_lider,
+            self.solicitante,
             self.plataforma,
             self.crm
         ])
     
-    def datos_lider(self):
-        return {
-            "nombre": self.lider,
-            "cargo": self.cargo_lider
-        }
 
     def tema_acta(self, n):
         return {
@@ -36,18 +32,24 @@ class Cambio:
             "codigo": self.codigo,
             "nombre": self.nombre,
             "entidad": self.entidad,
-            "lider": self.lider
+            "solicitante": self.solicitante
         }
 
     def bloque_narrativo(self, n):
+        fecha_formateada = (
+            self.fecha_ejecucion.strftime("%d/%m/%Y")
+            if self.fecha_ejecucion
+            else ""
+        )
+
         return {
             "n": n,
             "codigo": self.codigo,
             "crm": self.crm,
             "nombre": self.nombre,
-            "lider": self.lider,
+            "solicitante": self.solicitante,
             "descripcion": self.descripcion,
-            "fecha": self.fecha_ejecucion,
+            "fecha": fecha_formateada,
             "plataforma": self.plataforma
         }
 
@@ -55,6 +57,6 @@ class Cambio:
         return {
             "codigo": self.codigo,
             "nombre": self.nombre,
-            "solicitante": self.lider,
+            "solicitante": self.solicitante,
             "estado": "Aprobado"
         }

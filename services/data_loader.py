@@ -1,7 +1,6 @@
 import pandas as pd
 from domain.cambio import Cambio
 from domain.solicitante import Solicitante
-
 class ExcelLoader:
     
     def cargar_cambios(self, ruta_excel):
@@ -39,13 +38,22 @@ class ExcelLoader:
 
             solicitante = solicitantes_dic[clave]
 
+            ## Fecha
+            fecha_raw = datos["fecha_ejecucion"]
+            if pd.isna(fecha_raw):
+                fecha = None
+            else:
+                # Convertimos a datetime si viene como Timestamp
+                fecha = pd.to_datetime(fecha_raw).to_pydatetime()
+
+
             cambio = Cambio(
                 codigo=str(datos["codigo"]).strip(),
                 nombre=str(datos["nombre"]).strip(),
-                fecha_ejecucion=str(datos["fecha_ejecucion"]).strip(),
+                fecha_ejecucion=fecha,
                 descripcion=str(datos["descripcion"]).strip(),
                 entidad=str(datos["entidad"]).strip(),
-                lider= solicitante,
+                solicitante = solicitante,
                 plataforma=str(datos["plataforma"]).strip(),
                 crm=str(datos["crm"]).strip()
             )
@@ -53,4 +61,4 @@ class ExcelLoader:
             cambio.n = i
             cambios.append(cambio)
 
-        return cambios
+        return cambios, list(solicitantes_dic.values())

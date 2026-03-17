@@ -1,4 +1,11 @@
+import argparse
+from pathlib import Path
 from datetime import datetime, timedelta
+
+from services.data_loader import ExcelLoader
+from services.generador_word import GeneradorActaWord
+from services.document_processor import DocumentProcessor
+from domain.acta import ActaCambios
 
 def main():
 
@@ -6,7 +13,7 @@ def main():
         description="Generador automático de actas de comité de cambios"
     )
 
-    parser.add_argument("csv")
+    parser.add_argument("entrada")
     parser.add_argument("numero")
     parser.add_argument("--titulo", default="ACTA COMITÉ DE CAMBIOS")
     parser.add_argument("--salida", default="output/")
@@ -16,7 +23,7 @@ def main():
 
     args = parser.parse_args()
 
-    ruta_csv = Path(args.csv)
+    ruta_csv = Path(args.entrada)
     salida = Path(args.salida)
     plantilla = Path(args.plantilla)
 
@@ -25,9 +32,21 @@ def main():
     lugar = args.lugar
 
     if args.dia:
-        dia = datetime.strptime(args.dia, "%Y-%m-%d")
+        try:
+            # Formato esperado: 28/03/2026
+            dia = datetime.strptime(args.dia, "%d/%m/%Y")
+        except ValueError:
+            try:
+                # Formato alternativo: 2026-03-28
+                dia = datetime.strptime(args.dia, "%Y-%m-%d")
+            except ValueError:
+                raise ValueError(
+                    "Formato de fecha inválido. Use DD/MM/AAAA o YYYY-MM-DD"
+                )
     else:
         dia = datetime.now() - timedelta(days=1)
+
+    dia_formateado = dia.strftime("%d/%m/%Y")
 
     salida.mkdir(exist_ok=True)
 
@@ -41,10 +60,8 @@ def main():
         titulo=titulo,
         numero=numeroActa,
         lugar=lugar,
-        fecha_actual=dia.strftime("%d/%m/%Y")
+        fecha_actual=dia_formateado
     )
-
-    acta.agregar_solicitantes(solicitantes)
 
     for c in cambios:
         acta.agregar_cambio(c)
@@ -67,3 +84,6 @@ def main():
         print(final)
     else:
         print("Error: no se pudo generar el acta final")
+
+if __name__ == "__main__":
+    main()

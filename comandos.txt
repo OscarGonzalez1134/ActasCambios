@@ -1,20 +1,28 @@
 Para whatsapp:
 1. Ajuste en ambiente 
-python main.py input/1436.xlsm 1436 --titulo="ACTA COMITÉ DE CAMBIOS AJUSTE EN AMBIENTE PRODUCTIVO"
+python main.py input/1441.xlsm 1441 --titulo="ACTA COMITÉ DE CAMBIOS AJUSTE EN AMBIENTE PRODUCTIVO"
 
 2. Emergente y ajuste en ambiente 
-python main.py input/1437.xlsm 1437 --titulo="ACTA COMITÉ DE CAMBIOS EMERGENTE Y AJUSTE EN AMBIENTE PRODUCTIVO" 
+python main.py input/1455.xlsm 1455 --titulo="ACTA COMITÉ DE CAMBIOS EMERGENTE Y AJUSTE EN AMBIENTE PRODUCTIVO"
 
 3. Conexiones y ajuste en ambiente 
-python main.py input/1438.xlsm 1438 --titulo="ACTA COMITÉ DE CAMBIOS CONEXIONES Y AJUSTE EN AMBIENTE PRODUCTIVO" --dia=13/03/2026
+python main.py input/1444.xlsm 1444 --titulo="ACTA COMITÉ DE CAMBIOS CONEXIONES Y AJUSTE EN AMBIENTE PRODUCTIVO" 
+
+4. Conexiones y emergente
+python main.py input/1450.xlsm 1450 --titulo="ACTA COMITÉ DE CAMBIOS CONEXIONES Y EMERGENTE" 
+
+
 
 4. Ajuste en ambiente 
-python main.py input/1436.xlsm --titulo="ACTA COMITÉ DE CAMBIOS EMERGENTE" numero=1423
+python main.py input/1456.xlsm 1456 --titulo="ACTA COMITÉ DE CAMBIOS AJUSTE EN AMBIENTE PRODUCTIVO" --dia=1/04/2026
 
 5. Conexiones, emergente y ajuste en ambiente 
-python main.py input/1438.xlsm 1438 --titulo="ACTA COMITÉ DE CAMBIOS CONEXIONES, EMERGENTE Y AJUSTE EN AMBIENTE PRODUCTIVO" --dia=13/03/2026
+python main.py input/1453.xlsm 1453 --titulo="ACTA COMITÉ DE CAMBIOS CONEXIONES, EMERGENTE Y AJUSTE EN AMBIENTE PRODUCTIVO"
 
+6. Emergente
+
+python main.py input/1452.xlsm 1452 --titulo="ACTA COMITÉ DE CAMBIOS EMERGENTE"
 
 Para teams
 
-python main.py input/1439.xlsm 1439 --titulo="ACTA COMITÉ DE CAMBIOS ORDINARIO" --lugar=Teams
+python main.py input/1457.xlsm 1457 --titulo="ACTA COMITÉ DE CAMBIOS ORDINARIO" --lugar=Teams
